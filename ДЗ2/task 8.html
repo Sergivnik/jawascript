@@ -1,0 +1,20 @@
+<script>
+  function power(val, pow) {
+    if (pow == 1) {
+      return;
+    }
+    pow = pow - 1;
+    valpow = valpow * val;
+    console.log(valpow, val, pow);
+    power(val, pow);
+  }
+  var val = 2;
+  var pow = 10;
+  var valpow = val;
+  power(val, pow);
+  alert("результат=" + valpow);
+
+// Что-то не придумал, как сделать без глобальной переменной(( 
+// или дополнительной переменной в функции. 
+// Ну и даже не пытался сделать для отрицательных или дробных степеней.
+</script>
