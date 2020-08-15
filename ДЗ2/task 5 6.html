@@ -1,0 +1,53 @@
+<script>
+  //Задание 5 и 6
+
+  function addition(a, b) {
+    return a + b;
+  }
+  function subtraction(a, b) {
+    return a - b;
+  }
+  function multiplication(a, b) {
+    return a * b;
+  }
+  function division(a, b) {
+    if (b == 0) {
+      return "go to school to learn Math";
+    } else return a / b;
+  }
+  function arithmetic(a, b, operation) {
+    switch (operation) {
+      case addition:
+        return addition(a, b);
+      case subtraction:
+        return subtraction(a, b);
+      case multiplication:
+        return multiplication(a, b);
+      case division:
+        return division(a, b);
+    }
+  }
+  var a = +prompt("Введите первое число");
+  var b = +prompt("Введите второе число");
+  var operation;
+  var n = +prompt(
+    "Введите действие\n 1 - сложение\n 2 - вычитание \n 3 - умножение \n 4 - деление"
+  );
+  switch (n) {
+    case 1:
+      operation = addition;
+      break;
+    case 2:
+      operation = subtraction;
+      break;
+    case 3:
+      operation = multiplication;
+      break;
+    case 4:
+      operation = division;
+      break;
+    default:
+      alert("Я же просил 400 капель валерьянки((((");
+  }
+  alert("Результат " + arithmetic(a, b, operation));
+</script>
