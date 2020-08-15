@@ -1,0 +1,22 @@
+<script>
+  function countBasketPrice(basket) {
+    var n = basket.length;
+    var cost = 0;
+    for (var i = 0; i < n; i++) {
+      cost = cost + basket[i].price * basket[i].count;
+    }
+    return cost;
+  }
+  var basket = [
+    { title: "Товар 1", price: 100, count: 3 },
+    { title: "Товар 2", price: 300, count: 5 },
+    { title: "Товар 3", price: 300, count: 2 },
+    { title: "Товар 4", price: 250, count: 1 },
+    { title: "Товар 5", price: 300, count: 1 },
+  ];
+  document.write(
+    "<h1>Стоимость товаров в корзине" +
+      countBasketPrice(basket) +
+      " рублей</h1>"
+  );
+</script>
