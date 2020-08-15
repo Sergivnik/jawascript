@@ -7,15 +7,40 @@
     }
     return cost;
   }
+  function listBasket(basket) {
+    var n = basket.length;
+    var table = "<table border='1' width='600'>";
+    table +=
+      "<tr><td>Название товара</td><td>Цена товара</td><td>Количество товара</td><td>Сумма</td></tr>";
+    for (var i = 0; i < n; i++) {
+      table +=
+        "<td>" +
+        basket[i].title +
+        "</td>" +
+        "<td>" +
+        basket[i].price +
+        "</td>" +
+        "<td>" +
+        basket[i].count +
+        "</td>" +
+        "<td>" +
+        basket[i].price * basket[i].count +
+        "</td></tr>";
+    }
+    table += "</table>";
+    return table;
+  }
   var basket = [
     { title: "Товар 1", price: 100, count: 3 },
     { title: "Товар 2", price: 300, count: 5 },
     { title: "Товар 3", price: 300, count: 2 },
     { title: "Товар 4", price: 250, count: 1 },
     { title: "Товар 5", price: 300, count: 1 },
+    { title: "Товар 6", price: 350, count: 3 },
   ];
-  document.write(
-    "<h1>Стоимость товаров в корзине" +
+  document.write(listBasket(basket));
+  document.writeln(
+    "<h1>Стоимость товаров в корзине " +
       countBasketPrice(basket) +
       " рублей</h1>"
   );
