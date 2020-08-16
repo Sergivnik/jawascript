@@ -48,11 +48,17 @@
   ];
   //Вопрос я хочу добавить в корзину еще товар. Как это сделать? Сделал так стр 42,43
   //но чувствую что коряво
-  var good = prompt("Введите товар");
-  var priceOfGood = +prompt("Ввдите цену");
-  var countOfGood = +prompt("Ввдите количество");
-
-  addItem(basket, good, priceOfGood, countOfGood);
+  var good;
+  var priceOfGood;
+  var countOfGood;
+  var answer = 1;
+  do {
+    good = prompt("Введите товар");
+    priceOfGood = +prompt("Ввдите цену");
+    countOfGood = +prompt("Ввдите количество");
+    addItem(basket, good, priceOfGood, countOfGood);
+    answer = +prompt("Хотишь продолжить 1-да, 0-нет");
+  } while (answer != 0);
   document.write(listBasket(basket));
   document.writeln(
     "<h1>Стоимость товаров в корзине " +
