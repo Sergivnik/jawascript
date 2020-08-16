@@ -30,6 +30,14 @@
     table += "</table>";
     return table;
   }
+  function addItem(basket, nameItem, priceItem, countItem) {
+    var sizeBasket = basket.length;
+    basket[sizeBasket] = {
+      title: nameItem,
+      price: priceItem,
+      count: countItem,
+    };
+  }
   var basket = [
     { title: "Товар 1", price: 100, count: 3 },
     { title: "Товар 2", price: 300, count: 5 },
@@ -40,8 +48,11 @@
   ];
   //Вопрос я хочу добавить в корзину еще товар. Как это сделать? Сделал так стр 42,43
   //но чувствую что коряво
-  basket[6] = { title: "Товар 7", price: 450, count: 2 };
-  basket[6].title = "Товар 8";
+  var good = prompt("Введите товар");
+  var priceOfGood = +prompt("Ввдите цену");
+  var countOfGood = +prompt("Ввдите количество");
+
+  addItem(basket, good, priceOfGood, countOfGood);
   document.write(listBasket(basket));
   document.writeln(
     "<h1>Стоимость товаров в корзине " +
