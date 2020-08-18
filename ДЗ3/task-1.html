@@ -1,0 +1,20 @@
+<script>
+  function isPrimeNumber(n) {
+    var divider = 3;
+    if (n % 2 == 0) {
+      return false;
+    }
+    while (divider * divider < n && n % divider != 0) {
+      divider = divider + 2;
+    }
+    if (divider * divider > n) {
+      return true;
+    } else return false;
+  }
+  var text = " <h1>";
+  for (var i = 0; i <= 100; i++) {
+    if (isPrimeNumber(i)) text = text + i + " ";
+  }
+  text += "</h1>";
+  document.write(text);
+</script>
