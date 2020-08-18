@@ -4,14 +4,14 @@
   }
 </style>
 <script>
-  var number = +prompt("Введите число от 0 до 999");
+  var number;
   var count = 1;
   var object = {};
-  while ((number < 0 || number > 999 || isNaN(number)) && count < 3) {
+  do{
     number = +prompt("Введите число от 0 до 999");
     count++;
-  }
-  if (count == 3 && (isNaN(number) || number > 999 || number < 0)) {
+  }while ((number < 0 || number > 999 || isNaN(number)) && count < 3)
+  if (count == 3) {
     document.write("<h1>Беда у Вас, или с русским, или с математикой</h1>");
     console.log(object);
   } else {
