@@ -54,7 +54,17 @@ questions[3] = new question(
   "Кто был первым человеком на космосе?",
   " Адам",
   " Гагарин",
-  " Никто",
+  " Путин",
+  " Илон Маск",
+  3,
+  "",
+  "Вопрос на лояльность, Конечно Путин"
+);
+questions[4] = new question(
+  "А на самом деле?",
+  " Адам",
+  " Гагарин",
+  " Ленин",
   " Илон Маск",
   2,
   "",
@@ -138,12 +148,13 @@ function getUserAnswer(obj) {
     }
   }
   if (gameGoOn) {
-    if (i < 3) {
+    if (i < questions.length - 1) {
       statusGame.textContent = questions[i].point;
       setTimeout(nextQuestion, 1000);
     } else {
       gameGoOn = false;
-      statusGame.textContent = "Вы победили!!! Играть заново F5";
+      statusGame.textContent =
+        "Вы победили!!!\n" + questions[i].point + ". Играть заново F5";
     }
   }
   function nextQuestion() {
