@@ -89,7 +89,7 @@ function getUserAnswer(obj) {
           gameGoOn = false;
           statusGame.textContent =
             "Правильный ответ " +
-            questions[i].correctAnswer +
+            textCorrectAnswer(questions[i].correctAnswer) +
             " Играть заново F5";
         }
         break;
@@ -103,7 +103,7 @@ function getUserAnswer(obj) {
           gameGoOn = false;
           statusGame.textContent =
             "Правильный ответ " +
-            questions[i].correctAnswer +
+            textCorrectAnswer(questions[i].correctAnswer) +
             " Играть заново F5";
         }
         break;
@@ -117,7 +117,7 @@ function getUserAnswer(obj) {
           gameGoOn = false;
           statusGame.textContent =
             "Правильный ответ " +
-            questions[i].correctAnswer +
+            textCorrectAnswer(questions[i].correctAnswer) +
             " Играть заново F5";
         }
         break;
@@ -131,7 +131,7 @@ function getUserAnswer(obj) {
           gameGoOn = false;
           statusGame.textContent =
             "Правильный ответ " +
-            questions[i].correctAnswer +
+            textCorrectAnswer(questions[i].correctAnswer) +
             " Играть заново F5";
         }
         break;
@@ -140,7 +140,7 @@ function getUserAnswer(obj) {
   if (gameGoOn) {
     if (i < 3) {
       statusGame.textContent = questions[i].point;
-      setTimeout(nextQuestion, 2000);
+      setTimeout(nextQuestion, 1000);
     } else {
       gameGoOn = false;
       statusGame.textContent = "Вы победили!!! Играть заново F5";
@@ -157,5 +157,17 @@ function getUserAnswer(obj) {
     answerTwo.style.backgroundColor = "#aaa";
     answerThree.style.backgroundColor = "#aaa";
     answerFour.style.backgroundColor = "#aaa";
+  }
+  function textCorrectAnswer(numberOfAnswer) {
+    switch (numberOfAnswer) {
+      case 1:
+        return questions[i].option1;
+      case 2:
+        return questions[i].option2;
+      case 3:
+        return questions[i].option3;
+      case 4:
+        return questions[i].option4;
+    }
   }
 }
