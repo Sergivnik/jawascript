@@ -1,0 +1,32 @@
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
+<script>
+  var number;
+  var count = 1;
+  var object = {};
+  do{
+    number = +prompt("Введите число от 0 до 999");
+    count++;
+  }while ((number < 0 || number > 999 || isNaN(number)) && count < 3)
+  if (count == 3) {
+    document.write("<h1>Беда у Вас, или с русским, или с математикой</h1>");
+    console.log(object);
+  } else {
+    object.hundreds = (number - (number % 100)) / 100;
+    object.tens = ((number % 100) - (number % 10)) / 10;
+    object.units = number % 10;
+    console.log(object);
+    document.write(
+      "<h1>Сотни - " +
+        object.hundreds +
+        " Десятки - " +
+        object.tens +
+        " Единицы - " +
+        object.units +
+        "</h1>"
+    );
+  }
+</script>

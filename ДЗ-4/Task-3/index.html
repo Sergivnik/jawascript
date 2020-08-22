@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who wants to become milionaire</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/game.js" defer></script>
+  </head>
+  <body>
+    <h1>Кто хочет стать миллионером!</h1>
+    <div id="question"></div>
+    <div class="container">
+      <div
+        id="answer1"
+        class="beforeAnswer"
+        onclick="return getUserAnswer(this)"
+      ></div>
+      <div
+        id="answer2"
+        class="beforeAnswer"
+        onclick="return getUserAnswer(this)"
+      ></div>
+      <div
+        id="answer3"
+        class="beforeAnswer"
+        onclick="return getUserAnswer(this)"
+      ></div>
+      <div
+        id="answer4"
+        class="beforeAnswer"
+        onclick="return getUserAnswer(this)"
+      ></div>
+    </div>
+    <div id="statusOfGame"></div>
+  </body>
+</html>
