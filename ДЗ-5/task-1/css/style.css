@@ -1,0 +1,44 @@
+.title {
+  text-align: center;
+}
+
+.desk {
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cage {
+  width: 80px;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.blackCage {
+  background-color: #af775c;
+}
+
+.whiteCage {
+  background-color: #e7bd8c;
+}
+
+.borderCage {
+  background: #a06d55;
+  font-size: 30px;
+}
+
+.roteteCage {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=style.css.map */
