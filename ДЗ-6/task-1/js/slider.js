@@ -1,4 +1,4 @@
-var indexError = 0; //Номер картинки с отсутствующим файлом
+﻿var indexError = 0; //Номер картинки с отсутствующим файлом
 var smallPhoto = document.getElementsByTagName("img"); //Массив картинок
 for (var i = 1; i < smallPhoto.length; i++) {
   smallPhoto[i].onclick = changePhoto; //Назначаем функцию по клику на маленькой картинке
