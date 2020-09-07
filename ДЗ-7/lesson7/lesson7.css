@@ -33,6 +33,10 @@ td.game-table-cell {
     background-color: red;
 }
 
+.bomb-unit {
+    background-color: yellow;
+}
+
 .buttons {
     display: inline-block;
 }
