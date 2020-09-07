@@ -115,12 +115,24 @@ function move() {
 
     // Определяем новую точку
     if (direction == 'x-') {
+        if (coord_x == 0) {
+            coord_x = FIELD_SIZE_X;
+        }
         new_unit = document.getElementsByClassName('cell-' + (coord_y) + '-' + (coord_x - 1))[0];
     } else if (direction == 'x+') {
+        if (coord_x == FIELD_SIZE_X - 1) {
+            coord_x = -1;
+        }
         new_unit = document.getElementsByClassName('cell-' + (coord_y) + '-' + (coord_x + 1))[0];
     } else if (direction == 'y+') {
+        if (coord_y == 0) {
+            coord_y = FIELD_SIZE_Y;
+        }
         new_unit = document.getElementsByClassName('cell-' + (coord_y - 1) + '-' + (coord_x))[0];
     } else if (direction == 'y-') {
+        if (coord_y == FIELD_SIZE_Y - 1) {
+            coord_y = -1;
+        }
         new_unit = document.getElementsByClassName('cell-' + (coord_y + 1) + '-' + (coord_x))[0];
     }
 
